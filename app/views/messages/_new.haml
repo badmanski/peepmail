@@ -1,0 +1,12 @@
+= form_for @message do |f|
+  %legend Compose new message
+  .form-group
+    = f.text_field :from, class: 'form-control', placeholder: 'From'
+  .form-group
+    = f.text_field :to, class: 'form-control', placeholder: 'To'
+  .form-group
+    = f.text_field :subject, class: 'form-control', placeholder: 'Subject'
+  .form-group
+    = f.text_area :body, class: 'form-control', placeholder: 'Body'
+  .form-group
+    = f.submit nil, class: 'btn btn-primary'
