@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.where(to: current_user)
-    @message = Message.new
+    @message = Message.new(from: current_user)
   end
 
   def create
