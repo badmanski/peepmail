@@ -1,12 +1,14 @@
 = form_for @message do |f|
   %legend Compose new message
   .form-group
-    = f.text_field :from, class: 'form-control', placeholder: 'From'
+    = f.text_field :from, class: 'form-control', placeholder: 'From', required: true
   .form-group
-    = f.text_field :to, class: 'form-control', placeholder: 'To'
+    = f.text_field :to, class: 'form-control', placeholder: 'To', required: true
   .form-group
-    = f.text_field :subject, class: 'form-control', placeholder: 'Subject'
+    = f.text_field :subject, class: 'form-control', placeholder: 'Subject', required: true
   .form-group
-    = f.text_area :body, class: 'form-control', placeholder: 'Body'
+    = f.text_area :body, class: 'form-control', placeholder: 'Body',
+                         required: true, minlength: 2000,
+                         'data-bv-stringlength-message' => 'Body length can not be less than 2000 characters'
   .form-group
     = f.submit nil, class: 'btn btn-primary'
