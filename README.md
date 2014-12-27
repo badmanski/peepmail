@@ -1,3 +1,3 @@
 # peepmail
 
-#### implementation of Peepmail on Rails
+implementation of Peepmail on Rails
