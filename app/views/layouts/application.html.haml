@@ -2,7 +2,6 @@
 %html
   %head
     %title Peepmail
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     %meta{ charset: 'utf-8' }
     %meta{ content: 'IE=edge', 'http-equiv' => 'X-UA-Compatible' }
     %meta{ content: 'width=device-width, initial-scale=1', name: 'viewport' }
@@ -10,3 +9,4 @@
     = csrf_meta_tags
   %body
     = yield
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
