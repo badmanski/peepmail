@@ -1,0 +1,7 @@
+.col-md-4.col-md-offset-4
+  = form_tag :sessions do
+    %legend Sign in
+    .form-group
+      = text_field_tag :user, nil, class: 'form-control', placeholder: 'Username'
+    .form-group
+      = submit_tag nil, class: 'btn btn-primary btn-block'
