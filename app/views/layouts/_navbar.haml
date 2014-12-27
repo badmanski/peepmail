@@ -2,5 +2,6 @@
   .container
     .navbar-header
       = link_to 'Peepmail', root_path, class: 'navbar-brand'
-    %ul.nav.navbar-nav.navbar-right
-      %li= link_to 'Sign out', delete_sessions_path
+    - if current_user
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to 'Sign out', delete_sessions_path
