@@ -2,6 +2,6 @@
   = form_tag :sessions do
     %legend Sign in
     .form-group
-      = text_field_tag :user, nil, class: 'form-control', placeholder: 'Username'
+      = text_field_tag :user, nil, class: 'form-control', placeholder: 'Username', required: true
     .form-group
       = submit_tag nil, class: 'btn btn-primary btn-block'

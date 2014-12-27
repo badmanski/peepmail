@@ -17,4 +17,4 @@
 //= require material
 //= require ripples
 //= require bootstrapValidator
-//= require messages
+//= require validation

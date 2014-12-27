@@ -1,0 +1,2 @@
+$ ->
+  $('form').bootstrapValidator();
