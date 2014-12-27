@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   end
 
   def index
-    @messages = Message.where(to: current_user)
+    @messages = Message.where(to: current_user).order(created_at: :desc)
     @message = Message.new(from: current_user)
   end
 
