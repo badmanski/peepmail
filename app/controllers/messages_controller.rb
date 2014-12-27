@@ -1,4 +1,8 @@
 class MessagesController < ApplicationController
+  before_action do
+    redirect_to new_session_path unless current_user
+  end
+
   def index
     @messages = Message.all
     @message = Message.new
