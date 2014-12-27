@@ -1,6 +1,6 @@
 %h1 Messages
 
 - @messages.each do |message|
-  = message.subject
-  = message.body
-  %br
+  .panel.panel-default
+    .panel-heading= "#{message.from}: #{message.subject}"
+    .panel-body= message.body
