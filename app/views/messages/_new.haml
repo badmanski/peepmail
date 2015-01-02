@@ -1,6 +1,5 @@
 = form_for @message do |f|
   %legend Compose new message
-  = f.hidden_field :from, class: 'form-control', placeholder: 'From'
   .form-group
     = f.text_field :to, class: 'form-control', placeholder: 'To', required: true
   .form-group

@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.where(to: current_user).order(created_at: :desc)
-    @message = Message.new(from: current_user)
+    @message = Message.new
   end
 
   def create
@@ -16,6 +16,8 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:from, :to, :subject, :body)
+    params.require(:message)
+          .permit(:to, :subject, :body)
+          .merge(from: current_user)
   end
 end
