@@ -18,6 +18,7 @@ group :development, :test do
   gem 'spring'
   gem 'quiet_assets'
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
 end
 
 group :production do
